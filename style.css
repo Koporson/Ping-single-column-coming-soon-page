@@ -85,32 +85,68 @@ form button {
 	color: hsl(0, 0%, 100%);
 	cursor: pointer;
 }
+form button:hover {
+	width: 185px;
+	height: 65px;
+	border-radius: 35px;
+	margin-left: 20px;
+	background-color: hsl(223, 100%, 88%);
+	border: 1px solid hsl(223, 100%, 88%);
+	box-shadow: 3px 18px 51px -13px hsl(223, 87%, 63%);
+	color: hsl(0, 0%, 100%);
+	cursor: pointer;
+}
 .icons {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 30px;
 }
-.fa-facebook-f::before {
+.fa-brands {
 	color: hsl(223, 87%, 63%);
 	font-size: 20px;
-	margin-right: 40px;
 	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid hsl(223, 100%, 88%);
+	margin-right: 30px;
+	transform: scaleY(0.9);
 }
-.fa-facebook-f::after {
-	border: 1px solid hsl(0, 0%, 59%);
-	width: 100px;
-	height: 30px;
+.fa-facebook-f {
+	padding: 10px 15px;
 }
-.fa-twitter::before {
-	color: hsl(223, 87%, 63%);
-	font-size: 20px;
-	margin-right: 40px;
+.fa-twitter {
+	padding: 10px 10px;
 }
-.fa-instagram::before {
-	color: hsl(223, 87%, 63%);
-	font-size: 20px;
+.fa-instagram {
+	padding: 10px 13px;
 }
+.fa-brands:hover {
+	color: hsl(0, 0%, 100%);
+	transform: scaleY(1);
+	transition: 0.4s ease-out;
+	backface-visibility: visible !important;
+	animation: flip 1.2s ease forwards;
+}
+
 form {
 	margin-top: -85px;
 	display: flex;
+}
+
+/* animations */
+
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: ease-in;
+		background-color: hsl(223, 87%, 63%);
+	}
 }
