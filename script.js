@@ -16,7 +16,6 @@ function checkEmail(e) {
 	}
 
 	if (emailInput.value === "" || emailInput == null) {
-		btn.classList.add("validbtn");
 		errorP.innerText = "Email cannot be empty";
 		e.preventDefault();
 	}
