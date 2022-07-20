@@ -156,6 +156,9 @@ form {
 }
 /*mobile */
 @media screen and (max-width: 700px) {
+	* {
+		overflow-x: hidden;
+	}
 	body {
 		height: 110vh;
 	}
@@ -177,7 +180,7 @@ form {
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		margin-top: 75px;
+		margin-top: -55px;
 		margin-left: auto;
 		width: 100%;
 		padding: 0 2.5rem;
